@@ -29,7 +29,6 @@ public class TopicListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic_list);
 
-        // 从 LoginActivity 拿数据
         nickname = getIntent().getStringExtra("name");
         moodFromLogin = getIntent().getStringExtra("mood");
 
@@ -43,7 +42,6 @@ public class TopicListActivity extends AppCompatActivity {
 
         rvTopics.setLayoutManager(new LinearLayoutManager(this));
         adapter = new TopicAdapter(topicList, topic -> {
-            // 点击进入 ChatRoom（下一步再实现真正聊天）
             Intent i = new Intent(this, ChatRoomActivity.class);
             i.putExtra("name", nickname);
             i.putExtra("topicTitle", topic.getTitle());
@@ -53,7 +51,6 @@ public class TopicListActivity extends AppCompatActivity {
 
         btnRefresh.setOnClickListener(v -> generateTopics());
 
-        // 初次进入也生成一次
         generateTopics();
     }
 
@@ -92,5 +89,6 @@ public class TopicListActivity extends AppCompatActivity {
         tvStats.setText("Online: " + onlineUsers + "   Topics: " + topicCount);
     }
 }
+
 
 
