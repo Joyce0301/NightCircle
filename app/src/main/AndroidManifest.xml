@@ -25,9 +25,12 @@
         </activity>
 
 
+
         <activity android:name=".TopicListActivity"/>
         <activity android:name=".ChatRoomActivity"/>
-        <activity android:name=".ReflectionActivity"/>
+        <activity
+            android:name=".ReflectionActivity"
+            android:exported="false" />
         <activity android:name=".MainActivity"/>
 
     </application>
