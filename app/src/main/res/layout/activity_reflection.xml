@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#050018"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvReflectionTitle"
+        android:text="Before you leave..."
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvReflectionHint"
+        android:text="Write one line about how you feel after this session."
+        android:textColor="#A6A6FF"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etReflection"
+        android:hint="I leave NightCircle tonight feeling..."
+        android:textColor="#FFFFFF"
+        android:textColorHint="#66FFFFFF"
+        android:background="@android:drawable/edit_text"
+        android:padding="10dp"
+        android:minLines="3"
+        android:maxLines="5"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:text="Save and exit"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
